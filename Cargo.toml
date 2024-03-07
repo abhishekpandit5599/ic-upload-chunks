@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "src/upload_img_chunks_rust_backend"
+]
+resolver = "2"
