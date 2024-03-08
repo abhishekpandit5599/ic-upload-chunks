@@ -1,3 +1,4 @@
 service : {
-    "greet": (text) -> (text) query;
+    "get_image": (nat32,nat32) -> (opt blob) query;
+    "upload_image": (nat32,nat32,blob) -> (opt blob);
 }
