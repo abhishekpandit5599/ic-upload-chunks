@@ -1,4 +1,5 @@
 service : {
     "get_image": (nat32,nat32) -> (opt blob) query;
+    "get_image1": (nat32,nat32) -> (opt blob) query;
     "upload_image": (nat32,nat32,blob) -> (opt blob);
 }
