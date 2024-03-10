@@ -1,5 +1,11 @@
+type Message = record { sender : nat32; message : text; receiver : nat32 };
 service : {
-    "get_image": (nat32,nat32) -> (opt blob) query;
-    "get_image1": (nat32,nat32) -> (opt blob) query;
-    "upload_image": (nat32,nat32,blob) -> (opt blob);
+  get_image : (nat32, nat32) -> (opt vec nat8) query;
+  get_image1 : (nat32, nat32) -> (opt vec nat8) query;
+  get_messages : (nat32, nat32) -> (opt vec Message) query;
+  get_messages_page : (nat32, nat32, nat64) -> (opt vec Message) query;
+  get_one_messages : (nat32, nat32) -> (opt Message) query;
+  send_message : (nat32, nat32, vec Message) -> (opt vec Message);
+  send_one_message : (nat32, nat32, Message) -> (opt Message);
+  upload_image : (nat32, nat32, vec nat8) -> (opt vec nat8);
 }
